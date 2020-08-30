@@ -59,3 +59,16 @@ function generateHTML(answers) {
   </body>
   </html>`;
   }
+
+  promptUser()
+  .then(function(answers) {
+    const html = generateHTML(answers);
+
+    return writeFileAsync("index.html", html);
+  })
+  .then(function() {
+    console.log("Successfully wrote to index.html");
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
