@@ -47,13 +47,22 @@ function generateHTML(answers) {
   <body>
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-      <p class="lead">I am from ${answers.location}.</p>
-      <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-      <ul class="list-group">
-        <li class="list-group-item">My GitHub username is ${answers.github}</li>
-        <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      <h1 class="display-4">MY TEAM</h1>
+
+
+
+
+      <div class="card" style="width: 18rem;">
+      <div class="card-header" id = "name">
+      ${answers.name}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">${answers.choices}</li>
+        <li class="list-group-item">${answers.email}</li>
+        <li class="list-group-item">${answers.github}</li>
       </ul>
+    </div>
+      
     </div>
   </div>
   </body>
