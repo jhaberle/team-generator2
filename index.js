@@ -30,6 +30,16 @@ function promptUser() {
         type: "input",
         message: "employee githud id",
         name: "github",
+    },
+    {
+        type: "checkbox",
+        message: "add another employee?",
+        name: "add-user",
+        choices: [
+            "Yes",
+            "No",
+        ]
+
     }
 ]);
 }
@@ -57,9 +67,9 @@ function generateHTML(answers) {
       ${answers.name}
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${answers.choices}</li>
-        <li class="list-group-item">${answers.email}</li>
-        <li class="list-group-item">${answers.github}</li>
+        <li class="list-group-item">Title: ${answers.name.choices}</li>
+        <li class="list-group-item">Email: ${answers.email}</li>
+        <li class="list-group-item">Github: ${answers.github}</li>
       </ul>
     </div>
       
@@ -76,7 +86,7 @@ function generateHTML(answers) {
     return writeFileAsync("index.html", html);
   })
   .then(function() {
-    console.log("Successfully wrote to index.html");
+    console.log("wrote to index");
   })
   .catch(function(err) {
     console.log(err);
