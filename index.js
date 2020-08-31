@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-
 const writeFileAsync = util.promisify(fs.writeFile);
+
 
 function promptUser() {
   return inquirer.prompt([
@@ -34,15 +34,26 @@ function promptUser() {
     {
         type: "checkbox",
         message: "add another employee?",
-        name: "add-user",
+        name: "add",
         choices: [
             "Yes",
             "No",
-        ]
+            ],
+            // newEmployee()
 
-    }
-]);
+        }
+ 
+    ]);
 }
+
+function newEmployee() {
+    if(choices === "Yes") {
+        promptUser();
+    } else {
+        return;
+    }
+}
+
 
 function generateHTML(answers) {
     return `
@@ -67,7 +78,7 @@ function generateHTML(answers) {
       ${answers.name}
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Title: ${answers.name.choices}</li>
+        <li class="list-group-item">Title: ${answers.choices.title}</li>
         <li class="list-group-item">Email: ${answers.email}</li>
         <li class="list-group-item">Github: ${answers.github}</li>
       </ul>
@@ -87,6 +98,7 @@ function generateHTML(answers) {
   })
   .then(function() {
     console.log("wrote to index");
+    newEmployee();
   })
   .catch(function(err) {
     console.log(err);
