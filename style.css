@@ -1,0 +1,30 @@
+* {
+    font-family: 'Krona One', sans-serif;
+}
+
+#header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5mm;
+    width: 100%;
+    position: relative;
+
+    
+}
+
+.container {
+    background-color: grey;
+    border-radius: 5mm;
+    margin: 20px;
+}
+
+.card-header {
+    background-color: royalblue;
+    color: white;
+}
+
+.card {
+    margin: 20px;
+    margin-bottom: 20px;
+}

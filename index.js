@@ -39,20 +39,23 @@ function promptUser() {
             "Yes",
             "No",
             ],
-            // newEmployee()
-
-        }
+    },
+    // newEmployee()
+      
  
     ]);
+
+
 }
 
-function newEmployee() {
-    if(choices === "Yes") {
-        promptUser();
-    } else {
-        return;
-    }
-}
+// function newEmployee() {
+//     if(promptUser.name === "add" && promptUser.name.choices === "Yes") {
+//         promptUser();
+//         console.log("new employee function kicked off");
+//     } else {
+//         return;
+//     }
+// }
 
 
 function generateHTML(answers) {
@@ -63,12 +66,14 @@ function generateHTML(answers) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">MY TEAM</h1>
+      <h1 class="display-4" id="header" = >MY TEAM</h1>
 
 
 
@@ -78,7 +83,7 @@ function generateHTML(answers) {
       ${answers.name}
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Title: ${answers.choices.title}</li>
+        <li class="list-group-item">Title: ${answers.choices}</li>
         <li class="list-group-item">Email: ${answers.email}</li>
         <li class="list-group-item">Github: ${answers.github}</li>
       </ul>
