@@ -83,7 +83,7 @@ function generateHTML(answers) {
       ${answers.name}
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Title: ${answers.choices}</li>
+        <li class="list-group-item">Title: ${answers.position}</li>
         <li class="list-group-item">Email: ${answers.email}</li>
         <li class="list-group-item">Github: ${answers.github}</li>
       </ul>
