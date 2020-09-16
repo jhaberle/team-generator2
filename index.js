@@ -7,7 +7,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 function promptUser() {
   return inquirer.prompt([
     {
-        type: "checkbox",
+        type: "list",
         message: "choose position",
         name: "position",
         choices: [
